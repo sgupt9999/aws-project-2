@@ -4,6 +4,9 @@ import boto3
 import sys
 import urllib.request
 import shutil
+from zipfile import ZipFile
+from os import listdir
+from os.path import join
 
 
 def bucket_exists(bucket):
@@ -98,12 +101,17 @@ def create_index_html_file():
 def create_style_css_file():
 ## Create style.css file
 	file = open('./style.css','w')
-	file.write('/*=====================================================================================\n')
+	file.write('/*=======================================================================================\n')
 	file.write('                                         	DEFAULT VALUES                               \n')
 	file.write('\n\n')
-	file.write('                                       Font Family:        Roboto Condensed              \n')
+	file.write('                                       Font Family       :Roboto Condensed             \n\n')
+	file.write('                                       Greenish Blue     :#34c6d3 (Buttons, Icons, Links, Lines & Backgrounds              \n')
+	file.write('                                       Steel Gray        :#41464b (Headings)             \n')
+	file.write('                                       Blue Bayoux       :#64707b (Paragraphs)           \n')
+	file.write('                                       White             :#fff (Text with Black Backgrounds \n')
+	file.write('                                       Black             :#000                           \n')
 	file.write('\n\n\n')
-	file.write('=====================================================================================*/\n')
+	file.write('=======================================================================================*/\n')
 	file.write('body {\n')
 	file.write('	font-family: "Roboto Condensed", sans-serif;\n\n')
 	file.write('}\n')
@@ -114,32 +122,39 @@ def upload_file(bucket,object,file_name):
 ## Upload file to S3
 	content = open(file_name,'rb')
 	s3 = boto3.client('s3')
-	if file_name == 'index.html':
+	#if file_name == 'index.html':
+	if file_name.split('.')[-1] == 'html': ## if the file name ends in html then make the context text/html
 	## if index.html specify the contenttype and make it public
 		s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='text/html',ACL='public-read')
-	elif file_name == 'style.css':
+	#elif file_name == 'style.css':
+	elif file_name.split('.')[-1] == 'css':
 		s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='text/css',ACL='public-read')
 	else:
 		s3.put_object(Bucket=bucket,Key=object,Body=content)
 		
+def unzip_upload_fontawesome(bucket):
+## This file has multiple sub-folders and all these need to be uploaded to S3
+## Creating a separate function just for font-awesome
+	with ZipFile('font-awesome.zip','r') as zip:
+		zip.extractall()
+	## Copy all files from the css and fonts sub-folder of the unzipped folder to S3
+	mypath = './font-awesome-4.7.0/css'
+	for file in listdir(mypath):
+		upload_file(bucket,'css/font-awesome/css/'+str(file),join(mypath,file))
+	mypath = './font-awesome-4.7.0/fonts'
+	for file in listdir(mypath):
+		upload_file(bucket,'css/font-awesome/fonts/'+str(file),join(mypath,file))
 
 # Start of User inputs
 
 bucket_name = 'cmei-website-bucket'
 bucket_name_img = 'cmei-website-image-bucket'
-download_web_list = [['https://code.jquery.com/jquery-3.3.1.js','jquery.js']] ## Download these files from the web
+download_web_list = [['https://code.jquery.com/jquery-3.3.1.js','jquery.js'],\
+		     ['https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip','font-awesome.zip']] ## Download these files from the web
 upload_web_files = [['jquery.js','js/jquery.js']]
 upload_other_files = [['index.html','index.html'],['style.css','css/style.css']]
 
 # End of User inputs
-
-
-
-create_index_html_file()
-create_style_css_file()
-for file in upload_other_files:
-	upload_file(bucket_name,file[1],file[0])
-exit(1)
 
 if not bucket_exists(bucket_name):
 # Create the bucket one time and make it host a static web site
@@ -166,6 +181,7 @@ copy_objects(bucket_name_img,bucket_name)
 download_web_files(download_web_list)
 for file in upload_web_files:
 	upload_file(bucket_name,file[1],file[0])
+unzip_upload_fontawesome(bucket_name)
 create_index_html_file()
 create_style_css_file()
 for file in upload_other_files:
