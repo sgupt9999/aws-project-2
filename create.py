@@ -221,12 +221,6 @@ def create_index_html_file():
 	file.write('\n')
 	file.write('	<body>\n')
 	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
 	file.write('		<!-- Home -->\n')
 	file.write('		<section id="home">\n')
 	file.write('			<div id="home-cover" class="bg-parallax animated fadeIn">\n')
@@ -242,12 +236,113 @@ def create_index_html_file():
 	file.write('					</div>\n')
 	file.write('				</div>\n')
 	file.write('			</div>\n')
+	file.write('		</section>\n\n\n')
+
+
+	file.write('		<!-- Services -->\n')
+	file.write('		<section id="services">\n')
+	file.write('			<div class="content-box">\n')
+	file.write('				<div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('					<h3> Services </h3>\n')
+	file.write('					<div class="content-title-underline"></div>\n')
+	file.write('				</div>\n')
+	file.write('				<div class="container">\n')
+	file.write('					<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">\n')
+
+	file.write('						<div class="col-md-4">\n')
+	file.write('							<div class="service-item">\n')
+	file.write('								<div class="service-item-icon">\n')
+	file.write('									<i class="fa fa-paint-brush fa-3x"></i>\n')
+	file.write('								</div>\n') ##service-item-icon
+	file.write('								<div class="service-item-title">\n')
+	file.write('									<h3> Web Design </h3>\n')	
+	file.write('								</div>\n') ##service-item-title
+	file.write('								<div class="service-item-desc">\n')
+	file.write('									<p>This is service item</p>\n')
+	file.write('								</div>\n') ##service-item-desc
+	file.write('							</div>\n') ##service-item
+	file.write('						</div>\n') ##column
+
+	file.write('            <div class="col-md-4">\n')
+	file.write('              <div class="service-item">\n')
+	file.write('                <div class="service-item-icon">\n')
+	file.write('                  <i class="fa fa-laptop fa-3x"></i>\n')
+	file.write('                </div>\n') ##service-item-icon
+	file.write('                <div class="service-item-title">\n')
+	file.write('                  <h3> Web Development </h3>\n')
+	file.write('                </div>\n') ##service-item-title
+	file.write('                <div class="service-item-desc">\n')
+	file.write('                  <p>This is Web Development item</p>\n')
+	file.write('                </div>\n') ##service-item-desc
+	file.write('              </div>\n') ##service-item
+	file.write('            </div>\n') ##column
+  
+	file.write('            <div class="col-md-4">\n')
+	file.write('              <div class="service-item">\n')
+	file.write('                <div class="service-item-icon">\n')
+	file.write('                  <i class="fa fa-tablet fa-3x"></i>\n')
+	file.write('                </div>\n') ##service-item-icon
+	file.write('                <div class="service-item-title">\n')
+	file.write('                  <h3> Mobile Apps  </h3>\n')
+	file.write('                </div>\n') ##service-item-title
+	file.write('                <div class="service-item-desc">\n')
+	file.write('                  <p>This is Mobile Apps item</p>\n')
+	file.write('                </div>\n') ##service-item-desc
+	file.write('              </div>\n') ##service-item
+	file.write('            </div>\n') ##column
+
+	file.write('            <div class="col-md-4">\n')
+	file.write('              <div class="service-item">\n')
+	file.write('                <div class="service-item-icon">\n')
+	file.write('                  <i class="fa fa-search fa-3x"></i>\n')
+	file.write('                </div>\n') ##service-item-icon
+	file.write('                <div class="service-item-title">\n')
+	file.write('                  <h3> SEO Optimization</h3>\n')
+	file.write('                </div>\n') ##service-item-title
+	file.write('                <div class="service-item-desc">\n')
+	file.write('                  <p>This is SEO Optimization item</p>\n')
+	file.write('                </div>\n') ##service-item-desc
+	file.write('              </div>\n') ##service-item
+	file.write('            </div>\n') ##column
+
+	file.write('            <div class="col-md-4">\n')
+	file.write('              <div class="service-item">\n')
+	file.write('                <div class="service-item-icon">\n')
+	file.write('                  <i class="fa fa-pencil-square-o fa-3x"></i>\n')
+	file.write('                </div>\n') ##service-item-icon
+	file.write('                <div class="service-item-title">\n')
+	file.write('                  <h3> UX Design </h3>\n')
+	file.write('                </div>\n') ##service-item-title
+	file.write('                <div class="service-item-desc">\n')
+	file.write('                  <p>This is UX Design item</p>\n')
+	file.write('                </div>\n') ##service-item-desc
+	file.write('              </div>\n') ##service-item
+	file.write('            </div>\n') ##column
+
+	file.write('            <div class="col-md-4">\n')
+	file.write('              <div class="service-item">\n')
+	file.write('                <div class="service-item-icon">\n')
+	file.write('                  <i class="fa fa-life-ring fa-3x"></i>\n')
+	file.write('                </div>\n') ##service-item-icon
+	file.write('                <div class="service-item-title">\n')
+	file.write('                  <h3> Support  </h3>\n')
+	file.write('                </div>\n') ##service-item-title
+	file.write('                <div class="service-item-desc">\n')
+	file.write('                  <p>This is Support item</p>\n')
+	file.write('                </div>\n') ##service-item-desc
+	file.write('              </div>\n') ##service-item
+	file.write('            </div>\n') ##column
+
+	file.write('					</div>\n') ##Row
+	file.write('				</div>\n') ##Container
+	file.write('			</div>\n') ##content-box
 	file.write('		</section>\n')
-	file.write('		<br><br><br><br><br><br><br><br>br><br><br><br><br><br><br><br>')
 	file.write('		<!-- jQuery -->\n')
 	file.write('		<script src="js/jquery.js"></script>\n') ## jquery needs to come before custom.js and bootstrap
 	file.write('		<!-- bootstrap JS -->\n') 
 	file.write('		<script src="js/bootstrap/bootstrap.min.js"></script>\n') 
+	file.write('		<!-- WOW JS -->\n') 
+	file.write('		<script src="js/wow/wow.min.js"></script>\n') 
 	file.write('		<!-- custom JS -->\n')
 	file.write('		<script src="js/custom.js"></script>\n')
 	file.write('\n')
@@ -262,7 +357,7 @@ def create_style_css_file():
 ## Create style.css file
 	file = open('./style.css','w')
 	file.write('/*=======================================================================================\n')
-	file.write('                                         	DEFAULT VALUES                               \n')
+	file.write('                                         	DEFAULT VALUES                                 \n')
 	file.write('\n\n')
 	file.write('                                       Font Family       :Roboto Condensed             \n\n')
 	file.write('                                       Greenish Blue     :#34c6d3 (Buttons, Icons, Links, Lines & Backgrounds              \n')
@@ -279,7 +374,13 @@ def create_style_css_file():
 	file.write('body {\n')
 	file.write('	font-family: "Roboto Condensed", sans-serif;\n\n')
 	file.write('}\n')
+	file.write('p {\n')
+	file.write('	color: #64707b;\n')
+	file.write('	font-size: 16px;\n')
+	file.write('	font-weight: 300;\n')
+	file.write('}\n')
 	file.write('h3 {\n')
+	file.write('	color: #41464b;\n')
 	file.write('	text-transform: uppercase;\n')
 	file.write('}\n')
 	file.write('/*==============================================================\n')
@@ -350,22 +451,80 @@ def create_style_css_file():
 	file.write('#home-btn {\n')
 	file.write('	animation-delay: 1s;\n')
 	file.write('}\n')
+	file.write('/*==============================================================\n')
+	file.write('				CONTENT (Generic)				    \n')
+	file.write('==============================================================*/\n')
+	file.write('.content-box {\n')
+	file.write('	padding:60px 0 60px 0;\n')
+	file.write('}\n')
+	file.write('.content-title h3 {\n')
+	file.write('	font-size: 30px;\n')
+	file.write('	font-weight: 700;\n')
+	file.write('	text-align: center;\n')
+	file.write('	margin: 0 0 30px 0;\n')
+	file.write('	font-size: 30px;\n')
+	file.write('}\n')
+	file.write('.content-title-underline {\n')
+	file.write('	width: 30px;\n')
+	file.write('	height: 3px;\n')
+	file.write('	background-color: #34c6d3;\n')
+	file.write('	margin: 0 auto 30px auto;\n')
+	file.write('}\n')
+	file.write('/*==============================================================\n')
+	file.write('				SERVICES				    \n')
+	file.write('==============================================================*/\n')
+	file.write('.service-item {\n')
+	file.write('	padding:20px 0 20px 0;\n')
+	file.write('	margin-bottom: 20px;\n')
+	file.write('	cursor: pointer;\n')
+	file.write('}\n')
+	file.write('.service-item-icon i {\n')
+	file.write('	color:#34c6d3;\n')
+	file.write('	float: left;\n')
+	file.write('	padding:15px;\n')
+	file.write('	margin-right: 25px;\n')
+	file.write('	width: 75px;\n')
+	file.write('	height: 75px;\n')
+	file.write('	text-align: center;\n')
+	file.write('}\n')
+	file.write('.service-item:hover .service-item-icon i {\n')
+	file.write('	color: #fff;\n')
+	file.write('	background-color: #34c6d3 ;\n')
+	file.write('}\n')
+	file.write('.service-item-title h3 {\n')
+	file.write('	font-size: 20px;\n')
+	file.write('	font-weight: 400;\n')
+	file.write('	margin: 0 0 10px 0;\n')
+	file.write('}\n')
+	file.write('.service-item-desc p {\n')
+	file.write('	margin: 0;\n')
+	file.write('	padding-left: 85px ;\n')
+	file.write('}\n')
 	file.close()
 	
+
+def create_custom_js_file():
+## Create custom.js file
+	file = open('./custom.js','w')
+	file.write('/*=======================================================================================\n')
+	file.write('                                         	SERVICES                                     \n')
+	file.write('=======================================================================================*/\n')
+	file.write('$(function() {\n')
+	file.write('	// animate on scroll\n')
+	file.write('	new WOW().init();\n')
+	file.write('});\n')
+
 
 def upload_file(bucket,object,file_name):
 ## Upload file to S3
 	content = open(file_name,'rb')
 	s3 = boto3.client('s3')
-	#if file_name == 'index.html':
 	if file_name.split('.')[-1] == 'html': ## if the file name ends in html then make the context text/html
-	## if index.html specify the contenttype and make it public
-		#s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='text/html',ACL='public-read')
 		s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='text/html')
-	#elif file_name == 'style.css':
 	elif file_name.split('.')[-1] == 'css':
-		#s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='text/css',ACL='public-read')
 		s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='text/css')
+	elif file_name.split('.')[-1] == 'js':
+		s3.put_object(Bucket=bucket,Key=object,Body=content,ContentType='application/javascript')
 	else:
 		s3.put_object(Bucket=bucket,Key=object,Body=content)
 		
@@ -393,6 +552,15 @@ def unzip_upload_bootstrap(bucket):
 	mypath = './bootstrap-3.3.7-dist/js/bootstrap.min.js'
 	upload_file(bucket,'js/bootstrap/bootstrap.min.js',mypath)
 
+def unzip_upload_wow(bucket):
+## This file is needed so that animations only show when the user scrolls to that page
+	with ZipFile('master.zip','r') as zip:
+		zip.extractall()
+	## Copy wow.min.js
+	mypath = './WOW-master/dist/wow.min.js'
+	upload_file(bucket,'js/wow/wow.min.js',mypath)
+
+
 
 # Start of User inputs
 
@@ -401,15 +569,17 @@ bucket_name_img = 'cmei-website-image-bucket'
 download_web_list = [['https://code.jquery.com/jquery-3.3.1.js','jquery.js'],\
 		     ['https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip','font-awesome.zip'],\
 		     ['https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip','bootstrap-3.3.7-dist.zip'],
-		     ['https://raw.github.com/daneden/animate.css/master/animate.css','animate.css']] ## Download these files from the web
+		     ['https://raw.github.com/daneden/animate.css/master/animate.css','animate.css'],
+			 ['https://github.com/matthieua/WOW/archive/master.zip','master.zip']] ## Download these files from the web
 upload_web_files = [['jquery.js','js/jquery.js'],['animate.css','css/animate/animate.css']]
-upload_other_files = [['index.html','index.html'],['style.css','css/style.css']]
+upload_other_files = [['index.html','index.html'],['style.css','css/style.css'],['custom.js','js/custom.js']]
 
 # End of User inputs
 
 
 create_index_html_file()
 create_style_css_file()
+create_custom_js_file()
 for file in upload_other_files:
 	upload_file(bucket_name,file[1],file[0])
 
@@ -455,8 +625,10 @@ for file in upload_web_files:
 	upload_file(bucket_name,file[1],file[0])
 unzip_upload_fontawesome(bucket_name)
 unzip_upload_bootstrap(bucket_name)
+unzip_upload_wow(bucket_name)
 create_index_html_file()
 create_style_css_file()
+create_custom_js_file()
 for file in upload_other_files:
 	upload_file(bucket_name,file[1],file[0])
 
