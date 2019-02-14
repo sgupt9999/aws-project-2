@@ -227,7 +227,8 @@ def create_index_html_file():
 	file.write('				<div id="home-content-box">\n')
 	file.write('					<div id="home-content-box-inner" class="text-center">\n')
 	file.write('						<div id="home-heading" class="animated zoomIn">\n')
-	file.write('							<h3>Watch Out <br> The Modern Responsive Website!<h3>\n')
+	#file.write('							<h3>Watch Out <br> The Modern Responsive Website!<h3>\n')
+	file.write('							<h3>Coming Soon <br> Aaliya Gupta\'s Amazing Gallery<h3>\n')
 	file.write('						</div>\n')
 	file.write('						<div id="home-btn" class="animated zoomIn">\n')
 	file.write('							<a class="btn btn-lg btn-general btn-white" href="#work" roles="button"\n')
@@ -242,12 +243,12 @@ def create_index_html_file():
 	file.write('		<!-- Services -->\n')
 	file.write('		<section id="services">\n')
 	file.write('			<div class="content-box">\n')
-	file.write('				<div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('				<div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">\n')
 	file.write('					<h3> Services </h3>\n')
 	file.write('					<div class="content-title-underline"></div>\n')
 	file.write('				</div>\n')
 	file.write('				<div class="container">\n')
-	file.write('					<div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('					<div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">\n')
 
 	file.write('						<div class="col-md-4">\n')
 	file.write('							<div class="service-item">\n')
@@ -336,7 +337,44 @@ def create_index_html_file():
 	file.write('					</div>\n') ##Row
 	file.write('				</div>\n') ##Container
 	file.write('			</div>\n') ##content-box
-	file.write('		</section>\n')
+	file.write('		</section>\n')  ## End of services section
+
+
+	file.write('		<!-- About -->\n')
+	file.write('		<section id="about">\n')
+	
+	file.write('			<!-- About right side with diagonal BG parallax -->\n')
+	file.write('			<div id="about-bg-diagonal" class="bg-parallax"></div>\n')
+
+	file.write('			<!-- About left side with content -->\n')
+	file.write('			<div class="container">\n')
+	file.write('				<div class="row">\n')
+	file.write('					<div class="col-md-4">\n')
+	file.write('						<div id="about-content-box">\n')
+	file.write('							<div id="about-content-box-outer">\n')
+	file.write('								<div id="about-content-box-inner">\n')
+	file.write('									<div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('										<h3> About Vesco </h3>\n')
+	file.write('										<div class="content-title-underline"></div>\n')
+	file.write('									</div>\n')
+	file.write('									<div id="about-desc" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('										<p>This is about the Vesco company.</p>\n')
+	file.write('									</div>\n')
+	file.write('									<div id="about-btn" class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('										<a class="btn btn-lg btn-general btn-blue" href="#work" role="button"> Our Work </a>\n')
+	file.write('									</div>\n')
+	file.write('								</div>\n')
+	file.write('							</div>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('				</div>\n')
+	file.write('			</div>\n')
+	file.write('		</section>\n') ## End of about section
+
+
+
+	file.write('<br>,br><br><br><br>,br><br><br><br>,br><br><br><br>,br><br><br><br>,br><br><br><br>,br><br><br>\n')
+
 	file.write('		<!-- jQuery -->\n')
 	file.write('		<script src="js/jquery.js"></script>\n') ## jquery needs to come before custom.js and bootstrap
 	file.write('		<!-- bootstrap JS -->\n') 
@@ -436,6 +474,14 @@ def create_style_css_file():
 	file.write('	background-color: #fff;\n')
 	file.write('	color: #41464b;\n')
 	file.write('}\n')
+	file.write('.btn-blue {\n')
+	file.write('	border-color: #34c6d3;\n')
+	file.write('	color: #34c6d3;\n')
+	file.write('}\n')
+	file.write('.btn-blue:hover, .btn-blue:focus {\n')
+	file.write('	background-color: #34c6d3;\n')
+	file.write('	color: #fff;\n')
+	file.write('}\n')
 	file.write('/*==============================================================\n')
 	file.write('				ANIMATE				    \n')
 	file.write('==============================================================*/\n')
@@ -500,6 +546,42 @@ def create_style_css_file():
 	file.write('	margin: 0;\n')
 	file.write('	padding-left: 85px ;\n')
 	file.write('}\n')
+
+
+	file.write('/*==============================================================\n')
+	file.write('				ABOUT				    \n')
+	file.write('==============================================================*/\n')
+	file.write('#about-bg-diagonal {\n')
+	file.write('	width: 60%;\n')
+	file.write('	height: 700px;\n')
+	file.write('	float: right; \n')
+	file.write('	background-image: url(../img/bg-about.jpg);\n')
+	file.write('	border-left: 200px solid #fff;\n')
+	file.write('	border-top: 700px solid transparent;\n')
+	file.write('}\n')
+	file.write('#about-content-box {\n')
+	file.write('	float: left; \n')
+	file.write('	height: 700px;\n')
+	file.write('}\n')
+	file.write('#about-content-box-outer {\n')
+	file.write('	width: 100%;\n')
+	file.write('	height: 100%;\n')
+	file.write('	display: table;\n')
+	file.write('}\n')
+	file.write('#about-content-box-inner {\n')
+	file.write('	display: table-cell;\n')
+	file.write('	vertical-align: middle;\n')
+	file.write('}\n')
+	file.write('#about .content-title h3 {\n')
+	file.write('	text-align: left;\n')
+	file.write('}\n')
+	file.write('#about .content-title-underline {\n')
+	file.write('	margin: 0 0 30px 0;\n')
+	file.write('}\n')
+	file.write('#about-desc p {\n')
+	file.write('	margin-bottom: 30px;\n')
+	file.write('}\n')
+
 	file.close()
 	
 
