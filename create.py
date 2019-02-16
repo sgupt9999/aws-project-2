@@ -212,11 +212,15 @@ def create_index_html_file():
 	file.write('		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">\n')
 	file.write('		<!-- animate CSS -->\n')
 	file.write('		<link rel="stylesheet" href="css/animate/animate.css">\n')
+	file.write('		<!-- magnific-popup CSS -->\n')
+	file.write('		<link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">\n')
 	file.write('		<!-- style CSS -->\n')
 	file.write('		<link rel="stylesheet" href="css/style.css">\n\n')
 	file.write('\n')
 	file.write('\n')
-	file.write('	</head>\n')
+	file.write('	</head>\n') ## End of head section
+
+
 	file.write('\n')
 	file.write('\n')
 	file.write('	<body>\n')
@@ -373,6 +377,86 @@ def create_index_html_file():
 
 
 
+	file.write('		<!-- Work -->\n')
+	file.write('		<section id="work">\n')
+	file.write('			<div class="content-box">\n')
+	file.write('				<div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('					<h3> Our Work </h3>\n')
+	file.write('					<div class="content-title-underline"></div>\n')
+	file.write('				</div>\n')
+	file.write('			</div>\n') ## Content box
+	file.write('			<div class="container-fluid">\n') ## container is a fixed width class whereas container-fluid will take the full width of the page
+	file.write('				<div class="row no-gutters wow animated FadeInUp" data-wow-duration="1s" data-wow-delay=".5s">\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/1.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/1.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/2.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/2.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/3.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/3.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/4.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/4.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/5.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/5.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/6.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/6.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/7.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/7.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('					<div class="col-md-3">\n')
+	file.write('						<div class="img-wrapper">\n')
+	file.write('							<a href="img/work/8.jpg" title="Work Description Goes Here">\n')
+	file.write('								<img src="img/work/8.jpg" class="img-responsive" alt="Work">\n')
+	file.write('							</a>\n')
+	file.write('						</div>\n')
+	file.write('					</div>\n')
+	file.write('				</div>\n') ## End of row
+	file.write('			</div>\n') ## End of container
+
+
+
+
+	file.write('		</section>\n') ## End of work section
+
+
+
+
+
+
+
 	file.write('<br>,br><br><br><br>,br><br><br><br>,br><br><br><br>,br><br><br><br>,br><br><br><br>,br><br><br>\n')
 
 	file.write('		<!-- jQuery -->\n')
@@ -381,6 +465,8 @@ def create_index_html_file():
 	file.write('		<script src="js/bootstrap/bootstrap.min.js"></script>\n') 
 	file.write('		<!-- WOW JS -->\n') 
 	file.write('		<script src="js/wow/wow.min.js"></script>\n') 
+	file.write('		<!-- magnific-popup JS -->\n') 
+	file.write('		<script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>\n') 
 	file.write('		<!-- custom JS -->\n')
 	file.write('		<script src="js/custom.js"></script>\n')
 	file.write('\n')
@@ -582,6 +668,28 @@ def create_style_css_file():
 	file.write('	margin-bottom: 30px;\n')
 	file.write('}\n')
 
+
+	file.write('/*==============================================================\n')
+	file.write('				WORK				    \n')
+	file.write('==============================================================*/\n')
+	file.write('.row.no-gutters [class*=col-] {\n') ## Select all the columns for rows which have no-gutters class
+	file.write('	padding-left: 0;\n')
+	file.write('	padding-right: 0;\n')
+	file.write('}\n')
+	file.write('.img-wrapper {\n')
+	file.write('	overflow: hidden;\n')
+	file.write('}\n')
+	file.write('.img-wrapper img {\n')
+	file.write('	transition: transform;\n')
+	file.write('}\n')
+	file.write('.img-wrapper img:hover {\n')
+	file.write('	transform: scale(1.5);\n')
+	file.write('	cursor: zoom-in;\n')
+	file.write('}\n')
+	file.write('}\n')
+	
+
+
 	file.close()
 	
 
@@ -594,6 +702,19 @@ def create_custom_js_file():
 	file.write('$(function() {\n')
 	file.write('	// animate on scroll\n')
 	file.write('	new WOW().init();\n')
+	file.write('});\n')
+	file.write('/*=======================================================================================\n')
+	file.write('                                         	WORK                                     \n')
+	file.write('=======================================================================================*/\n')
+	file.write('$(function() {\n')
+	file.write('	// popup and gallrry feature\n')
+	file.write('	$("#work").magnificPopup({\n')
+	file.write('		delegate: \'a\', //child item selector, by clicking on it popup will open\n')
+	file.write('		type: \'image\',\n')
+	file.write('		gallery: {\n')
+	file.write('			enabled: true\n')
+	file.write('		}\n')
+	file.write('	});\n')
 	file.write('});\n')
 
 
@@ -643,6 +764,15 @@ def unzip_upload_wow(bucket):
 	upload_file(bucket,'js/wow/wow.min.js',mypath)
 
 
+def unzip_upload_magnific(bucket):
+## This file is needed so for gallery effect
+	with ZipFile('master2.zip','r') as zip:
+		zip.extractall()
+	## Copy wow.min.js
+	mypath = './Magnific-Popup-master/dist/magnific-popup.css'
+	upload_file(bucket,'css/magnific-popup/magnific-popup.css',mypath)
+	mypath = './Magnific-Popup-master/dist/jquery.magnific-popup.min.js'
+	upload_file(bucket,'js/magnific-popup/jquery.magnific-popup.min.js',mypath)
 
 # Start of User inputs
 
@@ -652,13 +782,16 @@ download_web_list = [['https://code.jquery.com/jquery-3.3.1.js','jquery.js'],\
 		     ['https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip','font-awesome.zip'],\
 		     ['https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip','bootstrap-3.3.7-dist.zip'],
 		     ['https://raw.github.com/daneden/animate.css/master/animate.css','animate.css'],
-			 ['https://github.com/matthieua/WOW/archive/master.zip','master.zip']] ## Download these files from the web
+			 ['https://github.com/matthieua/WOW/archive/master.zip','master.zip'],
+			 ['https://github.com/dimsemenov/Magnific-Popup/archive/master.zip','master2.zip']] ## Download these files from the web
 upload_web_files = [['jquery.js','js/jquery.js'],['animate.css','css/animate/animate.css']]
 upload_other_files = [['index.html','index.html'],['style.css','css/style.css'],['custom.js','js/custom.js']]
 
 # End of User inputs
 
 
+#download_web_files(download_web_list)
+#unzip_upload_magnific(bucket_name)
 create_index_html_file()
 create_style_css_file()
 create_custom_js_file()
@@ -708,6 +841,7 @@ for file in upload_web_files:
 unzip_upload_fontawesome(bucket_name)
 unzip_upload_bootstrap(bucket_name)
 unzip_upload_wow(bucket_name)
+unzip_upload_magnific(bucket_name)
 create_index_html_file()
 create_style_css_file()
 create_custom_js_file()
