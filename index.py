@@ -1,12 +1,5 @@
 #!/usr/local/bin/python3.6
 
-import boto3
-import sys
-import urllib.request
-import shutil
-from zipfile import ZipFile
-from os import listdir
-from os.path import join
 
 def create_index_html_file():
 ## Create index.html document
@@ -376,3 +369,100 @@ def create_index_html_file():
 	file.write('\n')
 	file.write('</html>\n')
 	file.close()
+
+
+
+
+def create_index_html_file_test():
+### This is a test function and not being sued anymore
+## Create index.html document
+        file = open('./index.html','w')
+        file.write('<!DOCTYPE html>\n')
+        file.write('<html lang="en">\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('    <head>\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('            <!-- required meta tags -->\n')
+        file.write('            <meta charset="utf-8">\n')
+        file.write('            <meta http-equip="X-UA-Compatible" conent="IE=edge">\n')
+        file.write('            <meta name="viewport" content="width=device-width, initial-scale=1">\n\n')
+        file.write('            <!-- title -->\n')
+        file.write('            <title>CMEI Systems Inc.</title>\n\n')
+        file.write('            <!-- favicon -->\n')
+        file.write('            <link rel="shortcut icon" href="img/favicon.ico">\n')
+        file.write('            <!-- google fonts -->\n')
+        file.write('            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i">\n')
+        file.write('            <!-- fontawesome -->\n')
+        file.write('            <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">\n')
+        file.write('            <!-- bootstrap CSS -->\n')
+        file.write('            <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">\n')
+        file.write('            <!-- style CSS -->\n')
+        file.write('            <link rel="stylesheet" href="css/style.css">\n\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('    </head>\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('    <body>\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('            <h1>BS Grid System Examples</h1>\n')
+        file.write('            <h3>1 Column</h3>\n')
+        file.write('            <div class="container">')
+        file.write('\n')
+        file.write('            <div class="row">')
+        file.write('\n')
+        file.write('            <div class="col-md-12 col-1">')
+        file.write('\n')
+        file.write('                    Content 1')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('\n')
+        file.write('            <h3>2 Columns</h3>\n')
+        file.write('            <div class="container">')
+        file.write('\n')
+        file.write('            <div class="row">')
+        file.write('\n')
+        file.write('            <div class="col-md-6 col-1">')
+        file.write('\n')
+        file.write('                    Content 1')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('            <div class="col-md-6 col-2">')
+        file.write('\n')
+        file.write('                    Content 2')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('\n')
+        file.write('            </div>\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('            <h1>Welcome to CMEI Systems</h1>\n')
+        file.write('            <i class="fa fa-laptop"></i>\n')
+        file.write('            <i class="fa fa-camera fa-5x"></i>\n')
+        file.write('            <!-- jQuery -->\n')
+        file.write('            <script src="js/jquery.js"></script>\n') ## jquery needs to come before custom.js and bootstrap
+        file.write('            <!-- bootstrap JS -->\n')
+        file.write('            <script src="js/bootstrap/bootstrap.min.js"></script>\n')
+        file.write('            <!-- custom JS -->\n')
+        file.write('            <script src="js/custom.js"></script>\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('    </body>\n')
+        file.write('\n')
+        file.write('\n')
+        file.write('</html>\n')
+        file.close()
+

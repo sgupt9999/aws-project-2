@@ -1,4 +1,5 @@
 #!/usr/local/bin/python3.6
+### This script creates AWs S3 hosted website
 
 import boto3
 import sys
@@ -71,122 +72,6 @@ def create_basic_structure(bucket):
 	print('Basic website structure completed')
 
 
-def create_index_html_file_test():
-## Create index.html document
-	file = open('./index.html','w')
-	file.write('<!DOCTYPE html>\n')
-	file.write('<html lang="en">\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('	<head>\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('		<!-- required meta tags -->\n')
-	file.write('		<meta charset="utf-8">\n')
-	file.write('		<meta http-equip="X-UA-Compatible" conent="IE=edge">\n')
-	file.write('		<meta name="viewport" content="width=device-width, initial-scale=1">\n\n')
-	file.write('		<!-- title -->\n')
-	file.write('		<title>CMEI Systems Inc.</title>\n\n')
-	file.write('		<!-- favicon -->\n')
-	file.write('		<link rel="shortcut icon" href="img/favicon.ico">\n')
-	file.write('		<!-- google fonts -->\n')
-	file.write('		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i">\n')
-	file.write('		<!-- fontawesome -->\n')
-	file.write('		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">\n')
-	file.write('		<!-- bootstrap CSS -->\n')
-	file.write('		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">\n')
-	file.write('		<!-- style CSS -->\n')
-	file.write('		<link rel="stylesheet" href="css/style.css">\n\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('	</head>\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('	<body>\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('		<h1>BS Grid System Examples</h1>\n')
-	file.write('		<h3>1 Column</h3>\n')
-	file.write('		<div class="container">')
-	file.write('\n')
-	file.write('		<div class="row">')
-	file.write('\n')
-	file.write('		<div class="col-md-12 col-1">')
-	file.write('\n')
-	file.write('			Content 1')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('\n')
-	file.write('		<h3>2 Columns</h3>\n')
-	file.write('		<div class="container">')
-	file.write('\n')
-	file.write('		<div class="row">')
-	file.write('\n')
-	file.write('		<div class="col-md-6 col-1">')
-	file.write('\n')
-	file.write('			Content 1')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('		<div class="col-md-6 col-2">')
-	file.write('\n')
-	file.write('			Content 2')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('\n')
-	file.write('		</div>\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('		<h1>Welcome to CMEI Systems</h1>\n')
-	file.write('		<i class="fa fa-laptop"></i>\n')
-	file.write('		<i class="fa fa-camera fa-5x"></i>\n')
-	file.write('		<!-- jQuery -->\n')
-	file.write('		<script src="js/jquery.js"></script>\n') ## jquery needs to come before custom.js and bootstrap
-	file.write('		<!-- bootstrap JS -->\n') 
-	file.write('		<script src="js/bootstrap/bootstrap.min.js"></script>\n') 
-	file.write('		<!-- custom JS -->\n')
-	file.write('		<script src="js/custom.js"></script>\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('	</body>\n')
-	file.write('\n')
-	file.write('\n')
-	file.write('</html>\n')
-	file.close()
-
-def create_style_css_file_old():
-## Create style.css file
-	file = open('./style.css','w')
-	file.write('/*=======================================================================================\n')
-	file.write('                                         	DEFAULT VALUES                               \n')
-	file.write('\n\n')
-	file.write('                                       Font Family       :Roboto Condensed             \n\n')
-	file.write('                                       Greenish Blue     :#34c6d3 (Buttons, Icons, Links, Lines & Backgrounds              \n')
-	file.write('                                       Steel Gray        :#41464b (Headings)             \n')
-	file.write('                                       Blue Bayoux       :#64707b (Paragraphs)           \n')
-	file.write('                                       White             :#fff (Text with Black Backgrounds \n')
-	file.write('                                       Black             :#000                           \n')
-	file.write('\n\n\n')
-	file.write('=======================================================================================*/\n')
-	file.write('body {\n')
-	file.write('	font-family: "Roboto Condensed", sans-serif;\n\n')
-	file.write('}\n')
-	file.write('/* CSS - Just for Grid Examples */\n')
-	file.write('.col-1 {background-color: red;}\n')
-	file.write('.col-2 {background-color: green;}\n')
-	file.write('.col-3 {background-color: blue;}\n')
-	file.write('.col-4 {background-color: yellow;}\n')
-	file.close()
-
 
 def create_custom_js_file():
 ## Create custom.js file
@@ -214,7 +99,7 @@ def create_custom_js_file():
 
 
 def upload_file(bucket,object,file_name):
-## Upload file to S3
+### Upload file_name to bucket and save as object
 	content = open(file_name,'rb')
 	s3 = boto3.client('s3')
 	if file_name.split('.')[-1] == 'html': ## if the file name ends in html then make the context text/html
@@ -269,31 +154,38 @@ def unzip_upload_magnific(bucket):
 	mypath = './Magnific-Popup-master/dist/jquery.magnific-popup.min.js'
 	upload_file(bucket,'js/magnific-popup/jquery.magnific-popup.min.js',mypath)
 
-# Start of User inputs
+##########################################################################################
+### Start of User inputs
+##########################################################################################
 
-bucket_name = 'cmei-website-bucket'
+bucket_name = 'cmei-website-bucket9999'
 bucket_name_img = 'cmei-website-image-bucket'
 download_web_list = [['https://code.jquery.com/jquery-3.3.1.js','jquery.js'],\
 		     ['https://fontawesome.com/v4.7.0/assets/font-awesome-4.7.0.zip','font-awesome.zip'],\
 		     ['https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip','bootstrap-3.3.7-dist.zip'],
 		     ['https://raw.github.com/daneden/animate.css/master/animate.css','animate.css'],
-			 ['https://github.com/matthieua/WOW/archive/master.zip','master.zip'],
-			 ['https://github.com/dimsemenov/Magnific-Popup/archive/master.zip','master2.zip']] ## Download these files from the web
+		     ['https://github.com/matthieua/WOW/archive/master.zip','master.zip'],
+		     ['https://github.com/dimsemenov/Magnific-Popup/archive/master.zip','master2.zip']] ## Download these files from the web
 upload_web_files = [['jquery.js','js/jquery.js'],['animate.css','css/animate/animate.css']]
 upload_other_files = [['index.html','index.html'],['style.css','css/style.css'],['custom.js','js/custom.js']]
 
-# End of User inputs
+short=0 ### if just want to test the small changes, then make this 1
+
+##########################################################################################
+### End of User inputs
+##########################################################################################
 
 
-#download_web_files(download_web_list)
-#unzip_upload_magnific(bucket_name)
-create_index_html_file()
-create_style_css_file()
-create_custom_js_file()
-for file in upload_other_files:
-	upload_file(bucket_name,file[1],file[0])
+if short == 1:
+	#download_web_files(download_web_list)
+	#unzip_upload_magnific(bucket_name)
+	create_index_html_file()
+	create_style_css_file()
+	create_custom_js_file()
+	for file in upload_other_files:
+		upload_file(bucket_name,file[1],file[0])
 
-exit(1)
+	exit(1)
 
 
 if not bucket_exists(bucket_name):
@@ -329,7 +221,7 @@ else:
 	print('The %s bucket already exists'%bucket_name)
 
 #create_basic_structure(bucket_name)
-copy_objects(bucket_name_img,bucket_name)
+copy_objects(bucket_name_img,bucket_name) ### copy objects from image bucket(which has been pre-populated) to the main website bucket
 download_web_files(download_web_list)
 for file in upload_web_files:
 	upload_file(bucket_name,file[1],file[0])

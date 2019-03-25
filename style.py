@@ -1,13 +1,5 @@
 #!/usr/local/bin/python3.6
 
-import boto3
-import sys
-import urllib.request
-import shutil
-from zipfile import ZipFile
-from os import listdir
-from os.path import join
-
 def create_style_css_file():
 ## Create style.css file
 	file = open('./style.css','w')
@@ -222,3 +214,30 @@ def create_style_css_file():
 
 
 	file.close()
+
+
+def create_style_css_file_old():
+### This is a test function and not being used right now
+## Create style.css file
+        file = open('./style.css','w')
+        file.write('/*=======================================================================================\n')
+        file.write('                                            DEFAULT VALUES                               \n')
+        file.write('\n\n')
+        file.write('                                       Font Family       :Roboto Condensed             \n\n')
+        file.write('                                       Greenish Blue     :#34c6d3 (Buttons, Icons, Links, Lines & Backgrounds              \n')
+        file.write('                                       Steel Gray        :#41464b (Headings)             \n')
+        file.write('                                       Blue Bayoux       :#64707b (Paragraphs)           \n')
+        file.write('                                       White             :#fff (Text with Black Backgrounds \n')
+        file.write('                                       Black             :#000                           \n')
+        file.write('\n\n\n')
+        file.write('=======================================================================================*/\n')
+        file.write('body {\n')
+        file.write('    font-family: "Roboto Condensed", sans-serif;\n\n')
+        file.write('}\n')
+        file.write('/* CSS - Just for Grid Examples */\n')
+        file.write('.col-1 {background-color: red;}\n')
+        file.write('.col-2 {background-color: green;}\n')
+        file.write('.col-3 {background-color: blue;}\n')
+        file.write('.col-4 {background-color: yellow;}\n')
+        file.close()
+
